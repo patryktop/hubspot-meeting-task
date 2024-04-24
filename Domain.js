@@ -58,6 +58,10 @@ const DomainSchema = new Schema({
         refreshToken: String,
         lastPulledDate: Date,
         lastPulledDates: {
+          meetings: {
+            type: Date,
+            default: moment().subtract(4, 'year').toISOString()
+          },
           companies: {
             type: Date,
             default: moment().subtract(4, 'year').toISOString()
